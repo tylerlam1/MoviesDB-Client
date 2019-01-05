@@ -10,6 +10,7 @@ export function fetchResult(movie) {
     API_KEY;
 
   const request = axios.get(url);
+
   return {
     type: FETCH_RESULT,
     payload: request
