@@ -3,25 +3,28 @@ import { connect } from "react-redux";
 
 class MovieList extends Component {
   render() {
-    return (
-      <table className="table">
-        <tbody>
-          <tr>
-            <td>
-              <img src="" />
-            </td>
-            <td>
-              <p>{this.props.movie.page}</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    );
+    if (typeof this.props.movie[0] !== "undefined") {
+      return (
+        <table className="table">
+          <tbody>
+            <tr>
+              <td>
+                <img src="" />
+              </td>
+              <td>
+                <p>{this.props.movie[0].results[0].title}</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
 function mapStateToProps(state) {
-  console.log(state.movie);
   return { movie: state.movie };
 }
 
