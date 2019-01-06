@@ -10,7 +10,7 @@ class MovieListItem extends Component {
           "https://image.tmdb.org/t/p/w185" +
           this.props.movie[0].results[i].poster_path;
         const movieItem = (
-          <table className="table">
+          <table className="table" key={this.props.movie[0].results[i].id}>
             <tbody>
               <tr>
                 <td>
