@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-class MovieList extends Component {
+class MovieListItem extends Component {
   render() {
     if (typeof this.props.movie[0] !== "undefined") {
       return (
@@ -28,4 +28,4 @@ function mapStateToProps(state) {
   return { movie: state.movie };
 }
 
-export default connect(mapStateToProps)(MovieList);
+export default connect(mapStateToProps)(MovieListItem);
