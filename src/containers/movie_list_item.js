@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class MovieListItem extends Component {
+  leaveWebsite() {
+    window.location.href =
+      "https://www.themoviedb.org/movie/" + this.props.movie[0].results[i].id;
+  }
   render() {
     if (typeof this.props.movie[0] !== "undefined") {
       const movieAssort = [];
@@ -39,12 +43,6 @@ class MovieListItem extends Component {
 }
 
 function mapStateToProps(state) {
-  if (typeof state.movie[0] !== "undefined") {
-    for (var i = 0; i < state.movie[0].results.length; i++) {
-      console.log(state.movie[0].results[i].title);
-      console.log(state.movie[0].results.length);
-    }
-  }
   return { movie: state.movie };
 }
 
