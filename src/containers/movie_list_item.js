@@ -21,7 +21,7 @@ class MovieListItem extends Component {
                     src={this.props.movie[0].results[i].poster_src}
                     onError={e => {
                       e.target.onerror = null;
-                      e.target.src = "logo.jpg";
+                      e.target.src = "./images/logo.jpg";
                     }}
                   />
                 </td>
