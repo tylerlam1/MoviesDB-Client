@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class MovieListItem extends Component {
-  leaveWebsite() {
-    window.location.href =
-      "https://www.themoviedb.org/movie/" + this.props.movie[0].results[i].id;
-  }
   render() {
     if (typeof this.props.movie[0] !== "undefined") {
       const movieAssort = [];
@@ -19,6 +15,7 @@ class MovieListItem extends Component {
               <tr>
                 <td>
                   <img
+                    className="imgframe"
                     src="poster"
                     width="300"
                     src={this.props.movie[0].results[i].poster_src}
