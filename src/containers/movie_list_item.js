@@ -20,12 +20,16 @@ class MovieListItem extends Component {
                 <td>
                   <img
                     src="poster"
-                    width="120"
+                    width="300"
                     src={this.props.movie[0].results[i].poster_src}
+                    onError={e => {
+                      e.target.onerror = null;
+                      e.target.src = "logo.jpg";
+                    }}
                   />
                 </td>
                 <td>
-                  <p>{this.props.movie[0].results[i].title}</p>
+                  <h1>{this.props.movie[0].results[i].title}</h1>
                   <p>{this.props.movie[0].results[i].overview}</p>
                 </td>
               </tr>
