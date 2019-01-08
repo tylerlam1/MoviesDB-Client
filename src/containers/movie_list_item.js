@@ -28,6 +28,9 @@ class MovieListItem extends Component {
                 <td>
                   <h1>{this.props.movie[0].results[i].title}</h1>
                   <p>{this.props.movie[0].results[i].overview}</p>
+                  <div className="star">
+                    {this.props.movie[0].results[i].vote_average}
+                  </div>
                 </td>
               </tr>
             </tbody>
